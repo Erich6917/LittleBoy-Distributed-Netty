@@ -1,4 +1,4 @@
-package com.little.cloud.server;
+package com.little.cloud.local;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

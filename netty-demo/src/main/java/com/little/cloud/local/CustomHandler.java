@@ -1,4 +1,4 @@
-package com.little.cloud.server;
+package com.little.cloud.local;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -30,7 +30,7 @@ public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {//Ht
 
   @Override
   public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-    System.out.println("channel注册");
+    System.out.println("channel登出");
     super.channelUnregistered(ctx);
   }
 
