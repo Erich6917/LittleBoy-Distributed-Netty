@@ -14,7 +14,7 @@
   <modules>
     <module>netty-demo</module>
     <module>core-concurrency</module>
-    <module>netty-http-server</module>
+    <module>netty-show-jt808</module>
   </modules>
 
   <properties>
@@ -24,6 +24,7 @@
     <spring-boot.version>2.1.9.RELEASE</spring-boot.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <commons.lang3.version>3.7</commons.lang3.version>
   </properties>
 
   <dependencyManagement>

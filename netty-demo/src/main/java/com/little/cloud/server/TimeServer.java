@@ -46,8 +46,9 @@ public class TimeServer {
       ByteBuf delimiter = Unpooled.copiedBuffer("$_$".getBytes());
       ByteBuf delimiter2 = Unpooled.copiedBuffer("$_$".getBytes(), "$_$".getBytes());
       ByteBuf delimiter3 = Unpooled.copiedBuffer("$_$".getBytes(), "$_$$$".getBytes());
+
       socketChannel.pipeline()
-          .addLast(new DelimiterBasedFrameDecoder(2048, delimiter, delimiter3, delimiter2));
+          .addLast(new DelimiterBasedFrameDecoder(2048, delimiter3, delimiter2, delimiter));
       socketChannel.pipeline().addLast(new StringDecoder());
       socketChannel.pipeline().addLast(new TimeServerHandler());
 
