@@ -1,5 +1,6 @@
 package com.little.cloud.executor;
 
+import com.little.cloud.task.PrintTask;
 import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.Executor;
@@ -12,7 +13,7 @@ import java.util.concurrent.Executors;
  */
 public class TaskExecutorWebServer {
 
-  private static final int NTHREADS = 100;
+  private static final int NTHREADS = 10;
 
   /**
    * 定长线程池
@@ -45,6 +46,7 @@ public class TaskExecutorWebServer {
       PrintTask task = new PrintTask(randomMsg());
       executor.execute(task);
     }
+
   }
 
   private String randomMsg() {
@@ -53,23 +55,3 @@ public class TaskExecutorWebServer {
 
 }
 
-class PrintTask implements Runnable {
-
-  private String msg;
-
-  PrintTask(String msg) {
-    this.msg = msg;
-  }
-
-  public void run() {
-
-    System.out.println("START " + Thread.currentThread().getName());
-    try {
-      Thread.sleep(new Random().nextInt(2000) + 1000);
-      System.out.println("print task " + msg);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-    System.out.println("END " + Thread.currentThread().getName());
-  }
-}

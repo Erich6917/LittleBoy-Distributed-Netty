@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/LittleBoy-Distributed-Netty.iml" filepath="$PROJECT_DIR$/LittleBoy-Distributed-Netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/core-concurrency/core-concurrency.iml" filepath="$PROJECT_DIR$/core-concurrency/core-concurrency.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-demo/netty-demo.iml" filepath="$PROJECT_DIR$/netty-demo/netty-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-show-jt808/netty-show-jt808.iml" filepath="$PROJECT_DIR$/netty-show-jt808/netty-show-jt808.iml" />
     </modules>
   </component>
 </project>
