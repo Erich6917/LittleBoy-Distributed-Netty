@@ -1,4 +1,4 @@
-package net.virtuemed.jt808.test;
+package com.little.cloud.test;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;

@@ -28,8 +28,10 @@ public class TimeServer {
     try {
       ServerBootstrap b = new ServerBootstrap();
       //最大连接数量设定 BACKLOG用于构造服务端套接字ServerSocket对象，标识当服务器请求处理线程全满时，用于临时存放已完成三次握手的请求的队列的最大长度。如果未设置或所设置的值小于1，Java将使用默认值50。
-      b.group(bossGroup, workGroup).channel(NioServerSocketChannel.class)
-          .option(ChannelOption.SO_BACKLOG, 1024).childHandler(new ChildChannelHandler());
+      b.group(bossGroup, workGroup)
+          .channel(NioServerSocketChannel.class)
+          .option(ChannelOption.SO_BACKLOG, 1024)
+          .childHandler(new ChildChannelHandler());
       //绑定端口，等待同步成功
       ChannelFuture f = b.bind(port).sync();
       f.channel().closeFuture().sync();
